@@ -1,7 +1,11 @@
 # Pulse
 A lightweight, ultra-modular C++ ECS framework for building flexible and efficient entity systems.
 
+Current state
 ```cpp
+// Copyright (c) October 2025 Félix-Olivier Dumas. All rights reserved.
+// Licensed under the terms described in the LICENSE file
+
 #include <iostream>
 #include <unordered_map>
 #include <string>
