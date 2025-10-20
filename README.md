@@ -112,12 +112,62 @@ public:
     }
 };
 
+
 class System {
 private:
 
 
 public:
     virtual void update(Registry<>& registry, float dt) = 0;
+
+};
+
+class Event /* BASE */ {
+    /* Exemples de dérivés :
+         - OnDamageEvent(...)
+         - OnCollisionEvent(...)
+    */
+
+    /* event = collisionTrigger.generateEvent(entity) */
+};
+
+class Trigger /* BASE */ {
+private:
+        /* Exemples de dérivés :
+             - collisionTrigger(...)
+             - damageTrigger(...)
+        */
+
+public:
+
+    /* event = collisionTrigger.generateEvent(entity) */
+
+};
+
+template<typename E = Event, typename S = System> class EventDispatcher {
+private:
+    std::map<E, std::vector<std::unique_ptr<S>>> eventListeners;
+
+public:
+    template <typename SS, typename E> void registerEvent(const E& event) {
+        static_assert(std::is_base_of_v<S, SS>, "Must derive from System");
+        static_assert(std::is_default_constructible_v<SS>, "Must be default constructible");
+
+        auto& vec = eventListeners[e];
+        for (auto& s : vec)
+            if (typeid(*s) == typeid(SS))
+                throw std::runtime_error("Component already exists!");
+        vec.push_back(std::make_unique<SS>());
+    }
+
+    /* Dans le fond, c'est un registry ecs mais qui sert aussi de proxy entre
+       les triggers, events et les systèmes qui appliquent le comportement. */
+
+    /* Remove Event() */
+
+    /* dispatcher.queue(event) */
+
+
 
 };
 
@@ -275,6 +325,15 @@ int main() {
                 |
                 v
         [EventDispatcher.queue(event)] --> [Systems abonnés traitent event]
+
+    */
+
+    /*
+        System.update():
+        for entity in managedEntities:
+            if collisionTrigger.condition(entity):
+                event = collisionTrigger.generateEvent(entity)
+                dispatcher.queue(event)   # Trigger ne connaît pas les systèmes abonnés
 
     */
 
