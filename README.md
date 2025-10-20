@@ -5,7 +5,6 @@ This is primarily as much an architectural challenge as it is a syntax challenge
 
 Small note, if you asked me to write this from memory without making any mistakes, I want to tell you right away that I would be incapable of it, the syntax is far too complex and I am only in my 2nd year of programming so I still have a long way to go before being able to do this professionally. However, I think I am clearly capable of creating minimal ecs systems that work very well. This is mainly an architectural experiment.
 
-Current state
 ```cpp
 // Copyright (c) October 2025 Félix-Olivier Dumas. All rights reserved.
 // Licensed under the terms described in the LICENSE file
