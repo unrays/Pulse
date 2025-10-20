@@ -221,10 +221,10 @@ int main() {
 }
 ```
 
-
+## Output
 ```console
 --------- Entity ---------
-Name           : e
+Name           : cat
 Type           : class Entity
 ID             : 0
 
