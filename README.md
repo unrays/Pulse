@@ -1,6 +1,8 @@
 # Pulse
 A lightweight, ultra-modular C++ ECS framework for building flexible and efficient entity systems.
 
+This is primarily as much an architectural challenge as it is a syntax challenge. This project served as a way for me to get a little more comfortable with ECS designs, C++ syntax, and generic templates and typing.
+
 Current state
 ```cpp
 // Copyright (c) October 2025 Félix-Olivier Dumas. All rights reserved.
