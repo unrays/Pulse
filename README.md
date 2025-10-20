@@ -220,3 +220,21 @@ int main() {
     //auto comp = reg.getComponent<MockComponent>(cat); lui
 }
 ```
+
+
+```console
+--------- Entity ---------
+Name           : e
+Type           : class Entity
+ID             : 0
+
+---- Core Attributes ----
+Name           : Garfield
+Weight         : 10 Kg
+Position       : (25, 75)
+Velocity       : (5, 15)
+
+------- Components -------
+Count          : 4
+Names          : Name, Weight, Velocity, Position
+```
