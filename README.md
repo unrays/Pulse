@@ -3,7 +3,7 @@ A lightweight, ultra-modular C++ ECS framework for building flexible and efficie
 
 This is primarily as much an architectural challenge as it is a syntax challenge. This project served as a way for me to get a little more comfortable with ECS designs, C++ syntax, and generic templates and typing.
 
-*That was back then; today, I'm more than comfortable with that kind of syntax, it's actually quite easy*
+*That was back then; today, I'm more than comfortable with that kind of syntax, it's actually quite easy. *
 Small note, if you asked me to write this from memory without making any mistakes, I want to tell you right away that I would be incapable of it, the syntax is far too complex and I am only in my 2nd year of programming so I still have a long way to go before being able to do this professionally. However, I think I am clearly capable of creating minimal ecs systems that work very well. This is mainly an architectural experiment.
 
 ```cpp
